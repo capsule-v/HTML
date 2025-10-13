@@ -1,0 +1,156 @@
+9)
+<?php
+$username = "VENU2025";
+$user_id = 2005;
+setcookie("username_cookie", $username, time() + 3600, "/");
+setcookie("user_id_cookie", $user_id, time() + (86400 * 1), "/");
+echo "Cookies have been set. Please refresh the page or navigate to another page to see them in action.";
+?>
+
+
+<?php
+echo "<h1>Retrieving Cookie Values: </h1>" ;
+Check if the 'username_cookie' is set
+if (isset($_COOKIE['username_cookie'])){
+echo <p>Username:". htmlspecialchars($_COOKIE['username_cookie'])."</p>";
+} else {
+echo "<p>Username cookie not found.</p>";
+} 
+Check if the 'user id cookie' is set
+if (isset($_COOKIE['user_id_cookie'])) {
+echo "<p>User ID: " htmlspecialchars($_COOKIE['user_id_cookie'])."</p>";
+} else {
+echo "<p>User ID cookie not found.</p>";
+} 
+? >
+
+
+
+10)
+<?php
+$host = 'localhost';
+$user = 'root';
+$pass = ";
+$dbname 'employee';
+$conn = mysqli_connect($host, $user, $pass, $dbname);
+if(! $conn)
+{
+die('Could not connect: mysqli_error());
+} 
+echo 'Connection established successfully';
+mysqli_close($conn);
+?>
+
+
+
+11)
+<?php
+session_start();
+if (isset($_SESSION['page_views'])) {
+$_SESSION['page_views']++;
+} else {
+$_SESSION['page_views'] = 1;
+} 
+echo "<h1>Welcome!</h1>";
+echo "<p>You have loaded this page ".$_SESSION['page_views']. "time(s) during this session.</p>";
+?>
+
+
+
+12)
+CreatingTable.php
+
+<? php
+$servername "localhost":
+$username "root":
+$password=""
+$dbname="employee";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+die("Connection failed: ".$conn->connect_error);
+} 
+$sql = "CREATE TABLE MyGuests (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY.
+firstname VARCHAR(30) NOT NULL,
+lastname VARCHAR(30) NOT NULL,
+email VARCHAR(50),
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE
+CURRENT_TIMESTAMP
+)";
+if ($conn->query($sql) === TRUE) {
+echo "Table MyGuests created successfully";
+} else {
+echo "Error creating table: ".$conn->error;
+} 
+$conn->close();
+?>
+
+
+
+Insertingvalues.php
+
+<?php
+$Sservername "localhost";
+$username = "root";
+$password = "";
+$dbname="employee";
+$conn = new mysqli($servername, $username. Spassword, $dbname);
+if ($conn->connect_error) {
+die("Connection failed: ".$conn->connect error);
+} 
+$sql="INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('venu', 'mur', 'venukoyyana4@gmail.com')";
+if ($conn->query($sql) = TRUE) {
+echo "New record created successfully";
+} else {
+echo "Error: ".$sql . "<br>", $conn->error;
+} 
+$conn->close();
+? >
+
+
+
+Read values.php
+
+<?php
+$servername= "localhost";
+$username= "root";
+$password="" ;
+$dbname= "employee";
+$conn new mysqli($servername, $username,$password, $dbname);
+($conn->connect_error) {
+die("Connection failed: ". $conn->connect_error);
+} 
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result-$conn->query($sql);
+if ($result->num_rows > 0) {
+while($row=$result->fetch_assoc()) {
+echo "id: ".$row["id"]." - Name: ".$row["firstname"]."". $row["lastname"]. "<br>";
+} 
+}  else {
+echo "0 results";
+} 
+$conn-close();
+?>
+
+
+
+Deletevalues.php
+
+<?php
+$servername "localhost":
+$username = "root";
+$password="" ;
+$dbname = "employee";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+die("Connection failed: ". $conn->connect_error);
+} 
+$sql = "DELETE FROM MyGuests WHERE id=1";
+if ($conn->query($sql) === TRUE) {
+echo "Record deleted successfully";
+} else {
+echo "Error deleting record: ". $conn->error;
+} 
+$conn->close();
+?>
