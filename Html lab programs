@@ -1,0 +1,336 @@
+1)Formatting Tags
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sri GCSR College - Program 1</title>
+</head>
+<body bgcolor="lightyellow">
+<h1>This is Heading 1</h1>
+<h2>This is Heading 2</h2>
+<h3>This is Heading 3</h3>
+<h4>This is Heading 4</h4>
+<h5>This is Heading 5</h5>
+<h6>This is Heading 6</h6>
+<p>This is a <b>bold</b> text.</p>
+<p>This is an <i>italic</i> text.</p>
+<p>This is an <u>underlined</u> text.</p>
+<p><font face="Arial" size="4" color="blue">This is Arial font, size 4, blue color.</font></p>
+<p>This is a paragraph. <br> This is after a line break.</p>
+<hr>
+<pre>
+This is preformatted text. It preserves spaces and line breaks.
+</pre>
+</body>
+</html>
+
+
+
+
+2)Create an HTML document which consists of: (a) Ordered List (b) Unordered List (c) Nested List (d) Image
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sri GCSR College - Program 2</title>
+</head>
+<body>
+<h2>Ordered List Example</h2>
+<ol>
+<li>Java</li>
+<li>Python</li>
+<li>C++</li>
+</ol>
+<h2>Unordered List Example</h2>
+<ul>
+<li>Mango</li>
+<li>Apple</li>
+<li>Banana</li>
+</ul>
+<h2>Nested List Example</h2>
+<ul>
+<li>Subjects
+<ol>
+<li>Mathematics</li>
+<li>Computer Science</li>
+<li>Physics</li>
+</ol>
+</li>
+<li>Sports
+<ul>
+<li>Cricket</li>
+<li>Football</li>
+<li>Badminton</li>
+</ul>
+<li>
+</ul>
+<h2>Image Example</h2>
+<img src="college.jpg" alt="College Image" width="300" height="200">
+</body>
+</html>
+
+
+
+
+
+3) Create a Table with four rows and five columns. Place an image in one column
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sri GCSR College - Program 3</title>
+</head>
+<body bgcolor="lightgreen">
+<h2 align="center">Table with Four Rows and Five Columns</h2>
+<table border="2" cellspacing="5" cellpadding="10" align="center">
+<!-- Header Row -->
+<tr align="center" bgcolor="lightyellow">
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+<th>Column 4</th>
+<th>Column 5</th>
+</tr>
+<!-- Row I with image in Column 3 -->
+<tr align="center" valign="middle">
+<td>Rowl Coll</td>
+<td>Row1 Col2</td>
+<td><img src="college.jpg" alt="College" width="100" height="80"></td>
+<td>Rowl Col4</td>
+<td>Row1 Col5</td>
+</tr>
+<!-Row 2-
+<tr align="center" valign="middle">
+<td>Row2 Coll</td>
+<td>Row2 Col2</td>
+<td>Row2 Col3</td>
+<td>Row2 Col4</td>
+<td>Row2 Col5</td>
+</tr>
+<!-Row 3->
+<tr align="center" valign="middle">
+<td>Row3 Coll</td>
+<td>Row3 Col2</td>
+<td>Row3 Col3</td>
+<td>Row3 Col4</td>
+<td>Row3 Col5</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+4)To design a simple Student Record Form using HTML that collects basic student details such as Roll Number, Name, Course, Year, and Address.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sri GCSR College - Program-5 (Record Form)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+font-family: Arial, sans-serif;
+margin: 0;
+background-color: #f4f4f4;
+} 
+/* Navigation Menu */
+nav {
+}
+background-color: #333;
+overflow: hidden;
+nav a {
+float: left;
+display: block;
+color: white;
+}
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+nav a:hover {
+}
+background-color: #575757;
+/ Form Container */
+.container{
+max-width: 600px;
+background: white;
+margin: 50px auto;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+.container h2 {
+text-align: center;
+margin-bottom: 20px;
+color: #333;
+}
+.form-group {
+margin-bottom: 15px;
+} 
+.form-group label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+width: 100%;
+padding: 8px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+} 
+form-group button {
+background-color: #333;
+color: white;
+border: none;
+padding: 10px 15px;
+cursor: pointer;
+width: 100%;
+border-radius: 4px;
+font-size: 16px;
+}
+form-group button:hover {
+background-color: #575757;
+} 
+</style>
+</head>
+<body>
+<!-- Top Menu -->
+<nav>
+<a href="#home">Home</a>
+<a href="#records">Records</a>
+<a href="#add">Add Record</a>
+<a href="#contact">Contact</a>
+</nav>
+<!-- Record Form Section -->
+<div class="container">
+<h2>Student Record Form</h2>
+<form>
+<div class="form-group">
+<label for="rollno">Roll Number:</label>
+<input type="text" id="rollno" placeholder="Enter Roll Number" required>
+</div>
+<div class="form-group">
+<label for="name">Student Name:</label>
+<input type="text" id="name" placeholder="Enter Full Name" required>
+</div>
+<div class="form-group">
+<label for="course">Course:</label>
+<select id="course" required>
+<option value="">-- Select Course -</option>
+<option value="bsc">B.Sc</option>
+<option value="bcom">B.Com</option>
+<option value="ba">B.A</option>
+<option value="bca">B.C.A</option>
+</select>
+</div>
+<div class="form-group">
+<label for="year">Year of Study:</label>
+<select id="year" required>
+<option value="">- Select Year -</option>
+<option value="1">I Year</option>
+<option value="2">II Year</option>
+<option value="3">III Year</option>
+</select>
+</div>
+<div class="form-group">
+<label for="address">Address:</label>
+<textarea id="address" rows="3" placeholder="Enter Address"></textarea>
+</div>
+<div class="form-group">
+<button type="submit">Save Record</button>
+</div>
+</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+5)To create a Menu form using HTML and style the menu buttons using CSS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sri GCSR College- Program-6</title>
+<!- Internal CSS -->
+<style>
+hl {
+color: blue;
+text-align: center;
+}
+P{
+color: green;
+font-size: 18px;
+}
+</style>
+<!-External CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Inline CSS -->
+<h1 style="background-color: yellow;">Welcome to CSS Demo</h1>
+<p>This paragraph is styled using <b>Internal CSS</b>.</p>
+<p class="external">This paragraph will be styled by External CSS.</p>
+</body>
+</html>
+
+Style. css
+external
+{
+color: red;
+font-style: italic;
+} 
+
+
+
+
+
+6)To validate a mobile number and email address using JavaScript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sri GCSR College- Program-11</title>
+<script>
+function validateForm()
+{
+const mobile document.getElementById("mobile").value; const email document.getElementById("email").value;
+const mobilePattern = /^[6-9]\d{9}$/;
+const email Pattern = /^[a-zA-Z0-9_%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$/; document.getElementById("mblstatus").innerHTML=""; document.getElementById("emailstatus").innerHTML="";
+if (!mobilePattern.test(mobile))
+{
+document.getElementById("mblstatus").innerHTML=
+"<font color=red>Please enter a valid 10-digit mobile number starting with 6-9."; 
+return false;
+} 
+else if (!emailPattern.test(email))
+{
+document.getElementById("emailstatus").innerHTML=
+"<font color=red>Please enter a valid email address.";
+return false;
+} 
+alert("Validation Successful");
+return true;
+}
+</script>
+</head>
+<body>
+<h2>Mobile and Email Validation</h2>
+<form onsubmit="return validateForm()">
+<label for="mobile">Mobile Number:</label>
+<input type="text" id="mobile" name="mobile"
+placeholder="Enter Mobile Number">
+<label id="mblstatus"></label><br><br>
+<label for="email">Email ID:</label>
+<input type="text" id="email" name="email" placeholder="Enter Email ID">
+<label id="emailstatus"></label><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
